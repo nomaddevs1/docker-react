@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          How lovely.How you doing)
+          How lovely.How you doing?
         </a>
       </header>
     </div>
