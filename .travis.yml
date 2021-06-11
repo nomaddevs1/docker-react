@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t nomad20/docker-reactdef -f Dockerfile.dev .
 scripts:
-  - docker run -e CI=true nomad20/docker-reactdef -- --coverage
+  - docker run -e CI=true nomad20/docker-reactdef npm run test -- --coverage
