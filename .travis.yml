@@ -6,3 +6,16 @@ before_install:
   - docker build -t nomad20/docker-reactdef -f Dockerfile.dev .
 scripts:
   - docker run -e CI=true nomad20/docker-reactdef npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-535188713912"
+  bucket_path: "docker-react"
+  on:
+    branch: master 
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET-KEY"
