@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          How lovely.How you doing?
+          change on the featured branch
         </a>
       </header>
     </div>

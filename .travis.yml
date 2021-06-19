@@ -4,7 +4,7 @@ services:
   - docker
 before_install:
   - docker build -t nomad20/docker-reactdef -f Dockerfile.dev .
-  - docker run -e CI=true nomad20/docker-reactdef npm run test -- --coverage
+  # - docker run -e CI=true nomad20/docker-reactdef npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
